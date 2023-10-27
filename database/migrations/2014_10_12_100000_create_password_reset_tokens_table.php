@@ -14,7 +14,7 @@ return new class extends Migration
     {
         DB::statement("set sql_require_primary_key = off");
         Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->string('email')->primary();
+            $table->string('email');
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });

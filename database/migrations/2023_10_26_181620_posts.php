@@ -14,7 +14,7 @@ return new class extends Migration
     {
         DB::statement("set sql_require_primary_key = off");
         Schema::create('posts', function (Blueprint $table) {
-            $table->id()->primary();
+            $table->id();
             $table->string('title',300)->nullable();
             $table->longText('content')->nullable();
             $table->string('url',300)->nullable();

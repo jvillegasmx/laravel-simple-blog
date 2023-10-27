@@ -14,7 +14,7 @@ return new class extends Migration
     {
         DB::statement("set sql_require_primary_key = off");
         Schema::create('failed_jobs', function (Blueprint $table) {
-            $table->id()->primary();
+            $table->id();
             $table->string('uuid')->unique();
             $table->text('connection');
             $table->text('queue');

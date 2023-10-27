@@ -14,7 +14,7 @@ return new class extends Migration
     {
         DB::statement("set sql_require_primary_key = off");
         Schema::create('personal_access_tokens', function (Blueprint $table) {
-            $table->id()->primary();
+            $table->id();
             $table->morphs('tokenable');
             $table->string('name');
             $table->string('token', 64)->unique();
