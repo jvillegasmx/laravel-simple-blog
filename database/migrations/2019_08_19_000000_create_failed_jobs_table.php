@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-      
+        DB::statement("set sql_require_primary_key = off");
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id()->primary();
             $table->string('uuid')->unique();
