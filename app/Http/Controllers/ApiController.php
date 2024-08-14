@@ -24,7 +24,7 @@ class ApiController extends Controller
             $offset = ($page - 1) * $limit;
 
             //Get articles
-            $articles = Posts::select("url","title","content", "created_at")->offset($offset)->limit($limit)->get();
+            $articles = Posts::select("url","title","content", "created_at")->offset($offset)->limit($limit)->orderBy("created_at","desc")->get();
 
             $articlesArray = [];
             foreach($articles as $article){
