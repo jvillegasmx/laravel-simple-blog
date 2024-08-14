@@ -3,7 +3,7 @@ export default {
   darkMode: 'class',
   content: [
     "./resources/**/*.blade.php",
-    "./resources/**/*.js",
+    "./resources/**/*.{js,jsx}",
     "./resources/**/*.vue",
   ],
   theme: {
