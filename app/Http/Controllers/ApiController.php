@@ -20,7 +20,7 @@ class ApiController extends Controller
 
             //Get pagination data
             $page = $request->input('page', 1);
-            $limit = 10;
+            $limit = 5;
             $offset = ($page - 1) * $limit;
 
             //Get articles
